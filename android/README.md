@@ -42,6 +42,31 @@
   </tr>
 </table>
 
+### 移动端实拍截图（暗色/浅色手机与平板自适应布局）
+
+<table>
+  <tr>
+    <td align="center" width="24%">
+      <img src="../docs/screenshots/android-phone-connect-dark.png" alt="Android 手机端暗色连接主页" width="100%" /><br/>
+      <sub><b>手机端（暗色）：一键连接与按应用分流</b></sub>
+    </td>
+    <td align="center" width="26%">
+      <img src="../docs/screenshots/android-tablet-connect-light.png" alt="Android 平板端浅色横屏适配" width="100%" /><br/>
+      <sub><b>平板端（浅色）：侧边栏自适应与隧道状态</b></sub>
+    </td>
+    <td align="center" width="25%">
+      <img src="../docs/screenshots/android-per-app-routing.png" alt="Android 按应用分流选择清单" width="100%" /><br/>
+      <sub><b>分流应用页：精准勾选 AI 与浏览器进入隧道</b></sub>
+    </td>
+    <td align="center" width="25%">
+      <img src="../docs/screenshots/android-usage-tickets.png" alt="Android AI 用量与工单" width="100%" /><br/>
+      <sub><b>用量与工单页：跨端脱敏会话用量与工单闭环</b></sub>
+    </td>
+  </tr>
+</table>
+
+> 可在 [GitHub Releases (`android-v0.1.0`)](https://github.com/guowei-3399/dingtu-client/releases/tag/android-v0.1.0) 下载由当前开源剥离源码构建的试运行 `.apk`；如需完整版强防泄露与环境自检能力请前往 [dingtu.noyapi.cn/download](https://dingtu.noyapi.cn/download)。
+
 ---
 
 ## 架构概览与「防风控 / 防泄露增强」剥离说明

@@ -25,6 +25,7 @@
   <a href="#关于提权与环境指纹--防风控控件与模块的开源剥离说明">剥离边界说明</a> ·
   <a href="./desktop/README.md">桌面端文档</a> ·
   <a href="./android/README.md">Android 端文档</a> ·
+  <a href="https://github.com/guowei-3399/dingtu-client/releases">开源版安装包 (Releases)</a> ·
   <a href="https://dingtu.noyapi.cn/download"><strong>官网下载完整版</strong></a>
 </p>
 
@@ -86,11 +87,29 @@
   - 支持账号自定义备注、分组管理、**定时自动唤醒（`wakeup-scheduler`）** 与 **RFC 6238 2FA TOTP 本地加密令牌管理 / 迁移二维码扫描**；
   - 支持企业团队跨端 AI Token 用量聚合分析（按会话/轮次/思考 Token 脱敏上云）与服务工单闭环。
 
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="docs/screenshots/desktop-overview.png" alt="定途桌面端 2.0 接入总览与多账号实时额度" width="100%" /><br/>
+      <sub><b>桌面工作台接入总览：多账号 5h / Weekly 实时配额对比与一键切号启动</b></sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="docs/screenshots/desktop-multi-account-instances.png" alt="定途多账号管理、分组筛选与多开入口界面" width="100%" /><br/>
+      <sub><b>多账号池与配额视图：支持别名/分组、ULTRA/PRO 分级、账户检测与应用多开切换</b></sub>
+    </td>
+  </tr>
+</table>
+
 ### 2. 应用多开与独立存储目录隔离
 
 - **CLI Agent 多开目录隔离**：通过 `safe-environment.mjs` 与 `agent-instance-host.mjs` 为不同 CLI 实例绑定专属环境变量配置根目录（例如 `CODEX_HOME`、`CLAUDE_CONFIG_DIR`、`GROK_HOME`、`GEMINI_CLI_HOME`、`XDG_CONFIG_HOME`），多个 Agent 会话并行执行代码任务互不覆盖 auth 状态。
 - **桌面 IDE 主副实例协同**：主实例（`main`）保留本机原生用户配置目录，企业或个人扩展副实例自动挂载按设备作用域隔离的独立 `--user-data-dir`，允许同一台机器同时运行多个互不干扰的 IDE 窗口。
 - **网页应用多容器并发**：通过 `isolated-browser.mjs` 为不同实例生成基于 SHA-256 作用域哈希的 `persist:dingtu-browser-<hash>` 持久化 Chromium 会话分区，同一款网页 AI 工具（如 Claude Web、ChatGPT、Manus、Meta Muse）可同时打开多个独立登录实例，Cookie、IndexedDB 与 localStorage 物理完全隔离。
+
+<p align="center">
+  <img src="docs/screenshots/desktop-dark-account.png" alt="定途深色模式账号概览、流量配额与多开实例状态" width="88%" /><br/>
+  <sub><b>深色工作台视图：主站账号概览、可用流量与主/备出口配额，搭配上方「账号总览 / 会话用量 / 应用多开 / 唤醒任务 / 账户检测」多开管理页签</b></sub>
+</p>
 
 ### 3. 17 款 AI Agent 与应用全覆盖矩阵
 
@@ -118,6 +137,11 @@
 
 > Android 移动端（`v0.1.0`）提供随身伴侣模式：通过系统级 `VpnService` 按应用精准勾选上述受管移动端 AI 应用与浏览器（或全局路由），并在同一套账户体系下查看 AI 用量与工单。
 
+<p align="center">
+  <img src="docs/screenshots/desktop-17-ai-plaza.png" alt="定途 2.0 应用广场全收录 17 款 AI 应用与容器" width="90%" /><br/>
+  <sub><b>应用广场实拍截图：全收录 17 款编程 IDE / CLI Agent、任务应用与网页对话容器，支持一键扫描导入与接入左侧常驻导航</b></sub>
+</p>
+
 ### 4. 环境指纹加强与防风控体系（官网完整版能力说明）
 
 在官网完整发行版（[https://dingtu.noyapi.cn/download](https://dingtu.noyapi.cn/download)）中，针对多账号协同与海外 AI 服务严格风控，桌面端与移动端提供四层递进的环境加强与泄露防护：
@@ -132,6 +156,34 @@
 4. **双端环境风控与链路核验**：
    - **桌面端**内置「一键环境指纹自检」，实测核验出口 IP、观测时区、语言、Clean Chrome UA、Client Hints、CJK 字体掩码、`dingtu-tun0` 状态并出具全绿诊断报告；
    - **Android 端**完整版启用 `strict_route: true` 防泄露路由锁、QUIC UDP 阻断规则，并在连接页提供目标出口时区一致性风险比对与远端 DoH 链路深度检测。
+
+<p align="center">
+  <img src="docs/screenshots/desktop-full-edition-hardening.png" alt="官网完整版强代理 TUN（dingtu-tun0）、Web 容器引擎与环境指纹自检界面" width="88%" /><br/>
+  <sub><b>官网完整版专属控制面实拍（开源版已按规范剥离）：包含「专属线路 / 强代理 TUN（虚拟网卡 dingtu-tun0）/ 自有网络」三态切换、安全容器/隔离 Chrome/Edge 引擎选择及「环境指纹与出口自检」控件</b></sub>
+</p>
+
+### 5. Android 移动端实拍截图展示（`v0.1.0` 手机 / 平板自适应界面）
+
+<table>
+  <tr>
+    <td align="center" width="24%">
+      <img src="docs/screenshots/android-phone-connect-dark.png" alt="Android 手机端暗色连接主页" width="100%" /><br/>
+      <sub><b>手机端（暗色）：一键连接、按应用分流与模式选择</b></sub>
+    </td>
+    <td align="center" width="26%">
+      <img src="docs/screenshots/android-tablet-connect-light.png" alt="Android 平板端浅色横屏适配" width="100%" /><br/>
+      <sub><b>平板端（浅色）：侧边栏自适应与快捷应用状态</b></sub>
+    </td>
+    <td align="center" width="25%">
+      <img src="docs/screenshots/android-per-app-routing.png" alt="Android 按应用分流清单" width="100%" /><br/>
+      <sub><b>按应用分流：勾选受管 AI 应用与浏览器进入隧道</b></sub>
+    </td>
+    <td align="center" width="25%">
+      <img src="docs/screenshots/android-usage-tickets.png" alt="Android 随身 AI 用量与工单闭环" width="100%" /><br/>
+      <sub><b>用量与工单：7/30/90 天脱敏会话汇总与服务工单</b></sub>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -269,6 +321,15 @@ dingtu-client/
 ---
 
 ## 快速开始与本地单元测试
+
+### 获取开源学习交流版安装包（GitHub Releases）
+
+如不自行源码编译，可直接在 [GitHub Releases](https://github.com/guowei-3399/dingtu-client/releases) 下载**基于本开源剥离分支重新构建**的试运行安装包（附带 `.sha256` 校验文件）：
+
+- **桌面端开源版 (`desktop-v0.2.0`)**：Windows x64 便携可执行文件（已剥离提权/强代理 TUN/指纹模块）
+- **Android 端开源版 (`android-v0.1.0`)**：Android 安装包 `.apk`（已剥离 `strict_route`/QUIC 拒绝/时区与 DoH 自检）
+
+> 若需要包含 **UAC 提权 `dingtu-tun0` 强代理与环境指纹防风控加强** 的正式生产客户端，请前往官网下载：**[https://dingtu.noyapi.cn/download](https://dingtu.noyapi.cn/download)**
 
 ### 桌面端 (`desktop/`, Node.js 22+)
 
