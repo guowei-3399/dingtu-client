@@ -9,20 +9,23 @@
 <p>
   <img src="https://img.shields.io/badge/Desktop-v0.2.0-2563EB?style=for-the-badge&logo=electron&logoColor=white" alt="Desktop v0.2.0" />
   <img src="https://img.shields.io/badge/Android-v0.1.0-16A34A?style=for-the-badge&logo=android&logoColor=white" alt="Android v0.1.0" />
+  <img src="https://img.shields.io/badge/AI%20Agents-17%20Supported-9333EA?style=for-the-badge" alt="17 AI Agents Supported" />
   <img src="https://img.shields.io/badge/sing--box-v1.14.2-0F172A?style=for-the-badge" alt="sing-box 1.14.2" />
   <img src="https://img.shields.io/badge/License-MIT-F59E0B?style=for-the-badge" alt="MIT License" />
-  <img src="https://img.shields.io/badge/Edition-Open--Source%20Learning-7C3AED?style=for-the-badge" alt="Open-Source Learning Edition" />
 </p>
 
 <p>
-  <strong>Electron 桌面工作台 <code>v0.2.0</code> + 原生 Kotlin / Jetpack Compose Android 客户端 <code>v0.1.0</code></strong><br/>
-  OAuth2 PKCE 设备绑定 · Ed25519 配置验签 · 本地基础联通链路 · AI 工作台架构参考
+  <strong>面向 AI 开发者与效率团队的受控网络 + 17 款 AI Agent 多账号 / 多开统一工作台</strong><br/>
+  多账号无缝切换 · 多实例隔离并发多开 · OAuth2 PKCE + Ed25519 验签 · 基础联通学习版
 </p>
 
 <p>
-  <a href="./desktop/README.md">桌面端详细文档</a> ·
-  <a href="./android/README.md">Android 端详细文档</a> ·
-  <a href="https://dingtu.noyapi.cn/download"><strong>下载官方完整版</strong></a>
+  <a href="#核心功能全景介绍">核心功能介绍</a> ·
+  <a href="#17-款-ai-agent-与应用全覆盖矩阵">17 款 AI 支持</a> ·
+  <a href="#关于提权与环境指纹--防风控控件与模块的开源剥离说明">剥离边界说明</a> ·
+  <a href="./desktop/README.md">桌面端文档</a> ·
+  <a href="./android/README.md">Android 端文档</a> ·
+  <a href="https://dingtu.noyapi.cn/download"><strong>官网下载完整版</strong></a>
 </p>
 
 </div>
@@ -30,11 +33,11 @@
 ---
 
 > [!IMPORTANT]
-> **版本声明（请先阅读）：**
+> **开源学习交流版声明（请先阅读）：**
 >
-> 1. 本仓库发布的 **桌面端 `v0.2.0`** 与 **Android 端 `v0.1.0`** 为 **开源学习交流版**，仅保留 **基础代理 / 基础 VPN 联通能力** 及 PKCE 登录、Ed25519 验签、UI 工作台、用量与工单架构，用于学习、审计与技术交流。
-> 2. 为遵守开源边界，本版本 **已主动剥离** 强代理虚拟网卡（Windows `strong_tun` / `dingtu-tun0`）、UAC 提权、双进程零停机热切换中继（`loopback-relay`）、浏览器 CDP 环境指纹与时区/语言/WebRTC/DNS 防风控防泄露增强模块，以及移动端严格路由（`strict_route`）/ QUIC 阻断 / 时区比对与深度泄露检测组件。
-> 3. **如需体验完整官方功能与加强隔离环境，请前往官网下载正式发行版：[https://dingtu.noyapi.cn/download](https://dingtu.noyapi.cn/download)**。
+> 1. 本仓库发布的 **桌面端 `v0.2.0`** 与 **Android 端 `v0.1.0`** 为 **开源学习交流版**。在完整保留 **定途 2.0 多账号无缝切换、应用多开、17 款 AI Agent 注册表与多实例工作台、PKCE 授权登录、Ed25519 验签及基础联通链路（桌面 `127.0.0.1:17899` / Android 基础 `VpnService`）** 的前提下：
+> 2. 为遵守开源边界，本版本 **已严格剥离所有「强代理 TUN、系统提权与环境指纹 / 防风控控件与模块」**——包括 Windows `strong_tun`（`dingtu-tun0`）虚拟网卡与 UAC 管理员提权模块（`tun-privilege`）、双进程零停机平滑热中继（`loopback-relay`）、CDP 0ms 硬件指纹与 Client Hints/字体注入引擎（`anti-detect-fingerprint`）、时区/语言/WebRTC/DNS 防泄露强制锁、`browser.fingerprintCheck`「环境指纹自检」弹窗与 UI 控件，以及 Android 端 `strict_route`、QUIC 拒绝规则与时区/DoH 深度泄露审计模块。
+> 3. **如需开箱使用上述提权强代理、全维环境指纹加强与防风控全功能，请前往官网下载正式完整发行版：[https://dingtu.noyapi.cn/download](https://dingtu.noyapi.cn/download)**。
 
 ---
 
@@ -44,48 +47,116 @@
   <tr>
     <td align="center" width="34%">
       <img src="desktop/assets/connection-banner-v1.png" alt="定途桌面连接视图概念" width="100%" /><br/>
-      <sub><b>桌面端 `0.2.0` · 基础代理连接与状态视图</b></sub>
+      <sub><b>桌面端 `0.2.0` · 基础代理连接与通道总览</b></sub>
     </td>
     <td align="center" width="33%">
       <img src="desktop/assets/launch-promotion-v1.png" alt="定途 2.0 多应用工作台概念" width="100%" /><br/>
-      <sub><b>桌面端 `0.2.0` · AI 应用工作台与多实例视图</b></sub>
+      <sub><b>桌面端 `0.2.0` · 17 款 AI 工作台、多账号与多开面板</b></sub>
     </td>
     <td align="center" width="33%">
       <img src="android/app/src/main/res/drawable-nodpi/bg_connection_hero.jpg" alt="定途 Android 移动端连接背景" width="100%" /><br/>
-      <sub><b>Android `0.1.0` · 原生 Compose 随身连接视图</b></sub>
+      <sub><b>Android `0.1.0` · 原生 Compose 按应用分流与随身管理</b></sub>
     </td>
   </tr>
 </table>
 
-### 原生适配生态标识
+<p align="center">
+  <img src="desktop/assets/app-logos/claude.png" width="36" alt="Claude" />&nbsp;&nbsp;&nbsp;
+  <img src="desktop/assets/app-logos/openai.png" width="36" alt="OpenAI / Codex" />&nbsp;&nbsp;&nbsp;
+  <img src="desktop/assets/app-logos/gemini.png" width="36" alt="Gemini" />&nbsp;&nbsp;&nbsp;
+  <img src="desktop/assets/app-logos/grok.png" width="36" alt="Grok" />&nbsp;&nbsp;&nbsp;
+  <img src="desktop/assets/app-logos/cursor.svg" width="36" alt="Cursor" />&nbsp;&nbsp;&nbsp;
+  <img src="desktop/assets/app-logos/copilot.svg" width="36" alt="GitHub Copilot" />&nbsp;&nbsp;&nbsp;
+  <img src="desktop/assets/app-logos/manus.svg" width="36" alt="Manus" />&nbsp;&nbsp;&nbsp;
+  <img src="desktop/assets/app-logos/meta.svg" width="36" alt="Meta Muse" />
+</p>
 
-<table>
-  <tr>
-    <td align="center" width="12%"><img src="desktop/assets/app-logos/claude.png" width="36" alt="Claude" /><br/><sub>Claude</sub></td>
-    <td align="center" width="12%"><img src="desktop/assets/app-logos/openai.png" width="36" alt="OpenAI / Codex" /><br/><sub>OpenAI / Codex</sub></td>
-    <td align="center" width="12%"><img src="desktop/assets/app-logos/gemini.png" width="36" alt="Gemini" /><br/><sub>Gemini</sub></td>
-    <td align="center" width="12%"><img src="desktop/assets/app-logos/grok.png" width="36" alt="Grok" /><br/><sub>Grok</sub></td>
-    <td align="center" width="12%"><img src="desktop/assets/app-logos/cursor.svg" width="36" alt="Cursor" /><br/><sub>Cursor</sub></td>
-    <td align="center" width="12%"><img src="desktop/assets/app-logos/copilot.svg" width="36" alt="Copilot" /><br/><sub>Copilot</sub></td>
-    <td align="center" width="12%"><img src="desktop/assets/app-logos/manus.svg" width="36" alt="Manus" /><br/><sub>Manus</sub></td>
-    <td align="center" width="14%"><img src="desktop/assets/app-logos/meta.svg" width="36" alt="Meta" /><br/><sub>Meta AI</sub></td>
-  </tr>
-</table>
+---
+
+## 核心功能全景介绍
+
+定途围绕 **「稳定联通 + 高效多账号协作 + 防串号环境隔离」** 设计，以下是系统完整能力全景（其中环境指纹加强与提权 TUN 部分在 GitHub 开源版中按规范剥离，完整体验位于官网发行版）：
+
+### 1. 多账号无缝切换与智能调度
+
+- **原子切号与反污染自愈**：在 Electron 主进程工作台（`workbench-accounts.mjs` / `local-account-importers.mjs`）内实现原子写入、切换前自动备份旧凭据，以及 Codex / Antigravity `authMeta` / 账号身份核验，杜绝跨账号上下文污染并在异常时自动自愈读回确认。
+- **全形态凭据接管与 OS 安全落盘**：支持「一键导入本机已登录账号」「OAuth 授权接入」「Token / Refresh Token 导入」「JSON 批量导入导出」，敏感凭据全部写入系统原生安全存储（Windows Credential Manager / macOS Keychain / Linux Secret Service / Android Keystore），不以明文暴露给渲染层。
+- **双维度配额看板与自动化策略**：
+  - 实时查询并对齐展示 **5 小时窗口额度（5h Quota）** 与 **周额度（Weekly Quota）**，不虚构百分比；
+  - 支持账号自定义备注、分组管理、**定时自动唤醒（`wakeup-scheduler`）** 与 **RFC 6238 2FA TOTP 本地加密令牌管理 / 迁移二维码扫描**；
+  - 支持企业团队跨端 AI Token 用量聚合分析（按会话/轮次/思考 Token 脱敏上云）与服务工单闭环。
+
+### 2. 应用多开与独立存储目录隔离
+
+- **CLI Agent 多开目录隔离**：通过 `safe-environment.mjs` 与 `agent-instance-host.mjs` 为不同 CLI 实例绑定专属环境变量配置根目录（例如 `CODEX_HOME`、`CLAUDE_CONFIG_DIR`、`GROK_HOME`、`GEMINI_CLI_HOME`、`XDG_CONFIG_HOME`），多个 Agent 会话并行执行代码任务互不覆盖 auth 状态。
+- **桌面 IDE 主副实例协同**：主实例（`main`）保留本机原生用户配置目录，企业或个人扩展副实例自动挂载按设备作用域隔离的独立 `--user-data-dir`，允许同一台机器同时运行多个互不干扰的 IDE 窗口。
+- **网页应用多容器并发**：通过 `isolated-browser.mjs` 为不同实例生成基于 SHA-256 作用域哈希的 `persist:dingtu-browser-<hash>` 持久化 Chromium 会话分区，同一款网页 AI 工具（如 Claude Web、ChatGPT、Manus、Meta Muse）可同时打开多个独立登录实例，Cookie、IndexedDB 与 localStorage 物理完全隔离。
+
+### 3. 17 款 AI Agent 与应用全覆盖矩阵
+
+定途 2.0 桌面工作台（`assistant-catalog.js`）原生收录全部 **17 款** 主流 AI 编程助手、命令行 Agent、自动化任务平台与大模型网页工作台，统一在一个入口完成检测、鉴权导入、切号、多开、用量统计与进程生命周期控制：
+
+| 分类 | 应用标识（`appId`） | 应用名称 | 形态与接入能力 |
+| --- | --- | --- | --- |
+| **编程 IDE / Agent（10 款）** | `antigravity` | **Antigravity** | 桌面应用启动 + 本地凭据导入/无缝切换 + 额度查询 + 多开 |
+| | `codex` | **Codex CLI** | CLI 多开（`CODEX_HOME`）+ OAuth/Token 接管 + 配额监控 + 本地 JSONL 用量统计 |
+| | `codex-desktop` | **Codex Desktop** | MSIX / 桌面客户端协同启动与统一进程关闭控制 |
+| | `copilot` | **GitHub Copilot** | GitHub Device Flow 授权 + 配额实时同步 |
+| | `windsurf` | **Windsurf** | 桌面 IDE 独立 `--user-data-dir` 多开与代理协同 |
+| | `kiro` | **Kiro** | 桌面应用 + Token 导入/刷新与多实例运行 |
+| | `cursor` | **Cursor** | 桌面 IDE 多开隔离 + 本机 SQLite/凭据切号与配额检查 |
+| | `grok-cli` | **Grok CLI** | CLI 独立 `GROK_HOME` 目录多开与代理环境变量注入 |
+| | `claude-code` | **Claude Code** | CLI 独立 `CLAUDE_CONFIG_DIR` 多开 + 额度同步 + 本地会话用量统计 |
+| | `gemini-cli` | **Gemini CLI** | CLI 独立 `GEMINI_CLI_HOME` 多开 + OAuth / 额度监控 |
+| **任务与桌面容器（3 款）** | `claude-desktop` | **Claude Desktop** | 桌面客户端本机启动管理与安全代理链路衔接 |
+| | `metamuse` | **Meta Muse** | `muse.ai` 独立应用壳层多实例 + 自动会话捕获 |
+| | `manus` | **Manus** | `manus.im` 独立应用壳层多实例 + 持久化会话隔离 |
+| **对话网页容器（4 款）** | `chatgpt` | **ChatGPT** | `chatgpt.com` 多账号容器并行 + 分区持久化登录态 |
+| | `claude` | **Claude Web** | `claude.ai` 多账号容器并行 + 分区持久化登录态 |
+| | `gemini-web` | **Gemini** | `gemini.google.com` 多账号容器并行 |
+| | `grok` | **Grok** | `grok.com` 多账号容器并行 |
+
+> Android 移动端（`v0.1.0`）提供随身伴侣模式：通过系统级 `VpnService` 按应用精准勾选上述受管移动端 AI 应用与浏览器（或全局路由），并在同一套账户体系下查看 AI 用量与工单。
+
+### 4. 环境指纹加强与防风控体系（官网完整版能力说明）
+
+在官网完整发行版（[https://dingtu.noyapi.cn/download](https://dingtu.noyapi.cn/download)）中，针对多账号协同与海外 AI 服务严格风控，桌面端与移动端提供四层递进的环境加强与泄露防护：
+
+1. **UAC 受控提权与内核级按进程强代理（`strong_tun`）**：
+   - Windows 通过受控 UAC 提权（`tun-privilege`）拉起名为 `dingtu-tun0` 的 Wintun 虚拟网卡，仅接管工作台白名单内 AI 应用及容器进程的 TCP/UDP 流量（配合 `loopback-relay` 双进程零停机热续租），避免全局接管本机其他软件或与外部 `7890` 工具冲突。
+2. **CDP 0ms 浏览器硬软件指纹一致化隔离**：
+   - 在隔离容器加载任何目标网站前（`about:blank` 预热阶段通过 CDP 零毫秒注入），统一生成绑定实例槽种子的 Canvas / WebGL / Audio / Screen / HardwareConcurrency 指纹参数，同步清洗 Electron UA 与 `Sec-CH-UA` Client Hints，并屏蔽暴露本地系统特征的 CJK 字体。
+3. **出口地理环境对齐与全栈泄露封堵**：
+   - 自动根据服务端下发的 `exitContext` 通过 CDP + 进程环境变量注入匹配的 IANA 时区（`TZ` / `Emulation.setTimezoneOverride`）、`Accept-Language`、`--lang` 与虚拟地理坐标（`Emulation.setGeolocationOverride`）；
+   - 锁定 `--host-resolver-rules` 与 FakeIP / 远端 DoH DNS 解析防止本地 DNS 泄露，开启 WebRTC `disable_non_proxied_udp` 阻断真实内/外网 IP 泄露，拦截网页对 `localhost` / `127.0.0.1:7890/17899` / RFC1918 内网的端口扫描探针。
+4. **双端环境风控与链路核验**：
+   - **桌面端**内置「一键环境指纹自检」，实测核验出口 IP、观测时区、语言、Clean Chrome UA、Client Hints、CJK 字体掩码、`dingtu-tun0` 状态并出具全绿诊断报告；
+   - **Android 端**完整版启用 `strict_route: true` 防泄露路由锁、QUIC UDP 阻断规则，并在连接页提供目标出口时区一致性风险比对与远端 DoH 链路深度检测。
+
+---
+
+## 关于「提权与环境指纹 / 防风控控件与模块」的开源剥离说明
+
+为遵守开源安全边界并明确 **GitHub 开源学习交流版** 与 **官网完整版** 的界线，以下模块与 UI 控件已在开源版中 **按规范精确剥离**（完整保留了多账号切换、应用多开、17 款 AI 接入与基础 `127.0.0.1:17899` / `VpnService` 联通）：
+
+| 端别 | 已剥离的提权与环境指纹 / 防风控控件与模块 | 开源版保留替代实现 | 完整版获取方式 |
+| --- | --- | --- | --- |
+| **桌面端 (`desktop/`)** | • `electron/tun-privilege.mjs`（Windows UAC 管理员提权探测与提权重启）<br>• `electron/loopback-relay.mjs`（双进程 TUN 零停机 TCP 中继）<br>• `electron/anti-detect-fingerprint.mjs`（CDP 0ms 硬件指纹 / Client Hints / CJK 字体掩码）<br>• `strong_tun`、`dingtu-tun0` 模式开关与 UAC 提权提示弹窗<br>• `--host-resolver-rules`、WebRTC `disable_non_proxied_udp`、`TZ`/`--lang` 覆写<br>• `browser.fingerprintCheck` IPC 与界面「环境指纹自检」控件 | 收敛为两态网络模式：**基础代理（`safe_tunnel`，固定 `127.0.0.1:17899` HTTP/SOCKS5）** 与 **自有网络（`own_network`）**；保留多实例 `persist:` / `--user-data-dir` / CLI 目录隔离、Clean Chrome UA 与本机端口扫描防护 | 前往官网下载完整版：<br>[dingtu.noyapi.cn/download](https://dingtu.noyapi.cn/download) |
+| **Android 端 (`android/`)** | • `AndroidLibboxConfigBuilder` 中的 `strict_route: true` 严格防泄露路由锁<br>• `route.rules` 中的 `quic` 协议强制 `reject` 规则<br>• `ExitSelfCheckService` 中的系统时区/语言一致性风控风险比对（`TimezoneAlignmentState`）与深度 DoH 延时防泄露审计卡片 | 保留 `gvisor` TUN 基础入站、`vless` `noya-device` 单出口（零 `direct`）、`sniff` + `hijack-dns` 基础规则、`BasicConnectivityCheckService` 基础外网可达性检测，以及主页显式「开源学习交流版」提示卡片 | 前往官网下载完整版：<br>[dingtu.noyapi.cn/download](https://dingtu.noyapi.cn/download) |
 
 ---
 
 ## 版本差异对比：开源学习交流版 vs 官网完整版
 
-| 功能模块 | 开源学习交流版（GitHub 本仓库） | 完整官方版（[dingtu.noyapi.cn/download](https://dingtu.noyapi.cn/download)） |
+| 能力维度 | 开源学习交流版（GitHub 本仓库） | 完整官方版（[dingtu.noyapi.cn/download](https://dingtu.noyapi.cn/download)） |
 | --- | --- | --- |
-| **账号认证与设备绑定** | OAuth2 PKCE + 系统安全存储（Credential Manager / Keystore） | 完整保留 |
-| **配置防篡改验签** | Ed25519 公钥锚定验签 + 闭合无直连图策略校验 | 完整保留 |
-| **桌面端数据面入口** | **两态模式**：基础代理 `127.0.0.1:17899`（`safe_tunnel`）/ `own_network` | **三态模式**：增加 `strong_tun` 内核级按进程接管 |
-| **系统提权与网卡清理** | **已剥离**（免管理员权限直接运行基础代理） | Windows UAC 提权 + Wintun `dingtu-tun0` 生命周期守护 |
-| **热切换平滑中继** | 常规配置重载 | 双进程零停机平滑 TCP 中继（`loopback-relay`） |
-| **环境指纹与防风控** | **已剥离**（不注入 CDP/时区/语言/WebRTC/DNS 伪装） | 完整防泄露容器（CDP 0ms 注入 + UA/Client Hints + DNS/WebRTC 锁） |
-| **Android 端隧道核心** | Kotlin + Compose + `libbox.aar` (`sing-box 1.14.2`) 基础 VPN 联通 | 完整 `strict_route` + QUIC 阻断 + 时区/DoH 深度自检 |
-| **多实例、用量与工单** | 基础工作台、隔离会话目录、AI 用量分析与工单闭环 UI | 完整企业配额与全链路诊断闭环 |
+| **OAuth2 PKCE + Ed25519 验签** | 完整保留（含系统安全存储与 10m 租约续期） | 完整保留 |
+| **17 款 AI Agent 注册表 & 多账号无缝切换** | 完整保留（支持本机/Token/JSON、5h+Weekly 额度、2FA TOTP） | 完整保留 |
+| **应用多开（CLI / IDE / 独立网页分区）** | 完整保留（基础代理或自有网络路由） | 完整保留 + 叠加内核与指纹层保护 |
+| **桌面端基础数据面联通** | 两态：`safe_tunnel` (`127.0.0.1:17899`) / `own_network` | 三态：新增 **`strong_tun`** 内核按进程强接管 |
+| **Windows UAC 提权与 `dingtu-tun0` 守护** | **已剥离**（免管理员权限直接学习与运行） | **完整内置**（含 `loopback-relay` 零停机热续租） |
+| **CDP 环境指纹加强与时区/DNS/WebRTC 防护** | **已剥离**（仅保留基础代理连接） | **完整内置**（含一键「环境指纹自检」全绿校验） |
+| **Android `VpnService` + `libbox.aar`** | 基础按应用 / 全局 TUN 联通 + 基础探测 | 完整 `strict_route` + QUIC 阻断 + 时区/DoH 自检 |
 
 ---
 
@@ -96,13 +167,13 @@
 ```mermaid
 flowchart LR
     subgraph Desktop["桌面端 Desktop v0.2.0 (Electron)"]
-        DUI["渲染器工作台<br/>(contextIsolation + sandbox)"]
+        DUI["工作台 UI<br/>(多账号 / 17 AI 应用 / 多开)"]
         DIPC["受限 IPC 网关<br/>(desktop-ipc)"]
         DPXY["配置验签与租约<br/>(Ed25519 + 10m 续期)"]
         DSB["sing-box v1.14.2<br/>127.0.0.1:17899"]
-        DAPP["受管 AI 应用 / 会话窗口"]
+        DAPP["17 款 AI Agent / 独立会话实例"]
         DUI --> DIPC --> DPXY --> DSB
-        DSB --> DAPP
+        DSB -->|"基础代理 / 多实例目录"| DAPP
     end
 
     subgraph Android["移动端 Android v0.1.0 (Kotlin + Compose)"]
@@ -118,7 +189,7 @@ flowchart LR
 
     DPXY <-->|"HTTPS + Bearer"| CP
     ALE <-->|"HTTPS + Bearer"| CP
-    DPXY <-->|"mTLS / 句柄兑换"| DP
+    DPXY <-->|"句柄兑换"| DP
     ALE <-->|"句柄兑换"| DP
 ```
 
@@ -153,22 +224,25 @@ sequenceDiagram
 
 ```text
 dingtu-client/
-├── README.md                                  # 本仓库总览（图文说明、架构图、版本对比）
-├── LICENSE                                    # MIT 开源协议
-├── .gitignore                                 # 忽略构建缓存与本机签名密钥
-├── desktop/                                   # 桌面端 Electron 工作台 (v0.2.0)
-│   ├── README.md                              # 桌面端图文说明与开发测试指南
+├── README.md                                  # 仓库总览：能力全景、17 AI 矩阵、剥离说明、Mermaid 架构图
+├── LICENSE                                    # MIT License
+├── .gitignore                                 # 屏蔽本地缓存、node_modules、Gradle 构建产物与签名密钥
+├── desktop/                                   # 桌面端开源学习交流版 (v0.2.0)
+│   ├── README.md                              # 桌面端工作台、多账号/多开及剥离细节说明
 │   ├── app.js / index.html / styles.css       # 定途 2.0 渲染器工作台
+│   ├── assistant-catalog.js                   # 17 款 AI Agent 与容器注册表契约
 │   ├── assets/                                # 品牌 Logo、推广 banner 与 AI 应用图标
-│   ├── electron/                              # 主进程、安全 IPC、PKCE、验签与基础代理管理
+│   ├── electron/                              # 主进程、受限 IPC、验签、基础代理与多账号工作台引擎
 │   │   ├── main.mjs / preload.cjs / desktop-ipc.mjs
+│   │   ├── workbench-accounts.mjs / local-account-importers.mjs / wakeup-scheduler.mjs
+│   │   ├── agent-instance-host.mjs / app-launcher.mjs / isolated-browser.mjs
 │   │   ├── production-proxy.mjs / local-proxy.mjs / environment-mode.mjs
 │   │   ├── production-trust.json              # Ed25519 生产公钥信任锚（仅含公钥）
 │   │   └── *.test.mjs                         # Electron 主进程与策略单元测试
 │   ├── native/                                # OS 原生凭据存储适配 (WinCred / Keychain / SecretService)
 │   └── runtime/sing-box/win32-x64/sing-box.exe# 随仓附带 sing-box v1.14.2 Windows 运行时
-└── android/                                   # Android 原生客户端 (v0.1.0)
-    ├── README.md                              # Android 端图文说明与构建指南
+└── android/                                   # Android 原生开源学习交流版 (v0.1.0)
+    ├── README.md                              # Android 端构建、按应用分流与剥离细节说明
     ├── build.gradle.kts / settings.gradle.kts # Gradle 构建配置 (Kotlin + Compose)
     ├── scripts/build-libbox.ps1               # libbox.aar 可复现交叉编译脚本（环境变量驱动）
     └── app/
@@ -183,7 +257,7 @@ dingtu-client/
 
 ## 随仓附带二进制清单
 
-本开源版经确认直接随仓提供运行时内核二进制（均控制在 GitHub 单文件 100 MiB 限制以内，便于克隆后直接进行学习调试与单元测试）：
+本仓库遵循《[开源版发布规范](https://github.com/guowei-3399/dingtu-client)》随仓保留经 SHA-256 校验的基础运行时内核（单文件均 `< 100 MiB`），克隆即可直接联调与运行单测：
 
 | 文件路径 | 适用平台 / 架构 | 用途说明 | 文件大小 |
 | --- | --- | --- | --- |
@@ -210,7 +284,9 @@ node --test --test-concurrency=2 electron/*.test.mjs
 node --test --test-concurrency=1 native/*.test.mjs
 ```
 
-如需运行 Electron 桌面窗体进行本地开发预览（需自行 `npm install` 安装 `electron` 运行时依赖）：
+> **第三方 OAuth 凭据说明**：开源版已将 `desktop/electron/oauth-account-flow.mjs` 中的第三方 Google OAuth Client ID/Secret 替换为环境变量读取，如需本地触发相关 OAuth 流程，可按需设置 `DINGTU_ANTIGRAVITY_OAUTH_CLIENT_ID` / `DINGTU_ANTIGRAVITY_OAUTH_CLIENT_SECRET` 与 `DINGTU_GEMINI_CLI_OAUTH_CLIENT_ID` / `DINGTU_GEMINI_CLI_OAUTH_CLIENT_SECRET`。
+
+如需启动 Electron 桌面端预览（需先在 `desktop/electron` 安装本地依赖）：
 
 ```bash
 cd desktop/electron
@@ -218,7 +294,7 @@ npm install
 npm start
 ```
 
-### Android 端 (`android/`, JDK 17 + Android SDK)
+### Android 端 (`android/`, JDK 17+ & Android SDK)
 
 ```powershell
 cd android
@@ -232,19 +308,17 @@ $env:ANDROID_HOME = "$env:LOCALAPPDATA\Android\Sdk"
 .\gradlew.bat assembleDebug --no-daemon
 ```
 
-> 更多细节见 [桌面端 README](./desktop/README.md) 与 [Android 端 README](./android/README.md)。
-
 ---
 
 ## 安全与开源合规边界
 
-1. **零敏感凭据入库**：本仓库仅包含开源客户端代码、UI 资源与经过剥离的基础运行时内核；所有内部运维脚本、真实服务端 IP、私钥、测试账号、会话 Cookie 与签名私钥（`d` 参数）均不在此仓库中存在。
-2. **仅含公开验签公钥**：`production-trust.json` 仅包含 Ed25519 公钥与 `keyId` 摘要，用于离线验证服务器配置信封未被篡改。
-3. **仅作学习交流用途**：本仓库不提供任何未授权网络服务接入能力；连接受控网络需配合完整版账户或自行搭建契约兼容的控制面/配置签发服务。
+1. **零敏感凭据与内控信息**：仓库已按脱敏规范清理内部打包记录、真实服务端/出口 IP、测试私钥、OAuth Client Secret 字面量与宿主机绝对路径。
+2. **仅含公开验签公钥**：`production-trust.json` 仅包含 Ed25519 公钥（不含私钥字段 `d`），用于本地离线核验服务器签名配置。
+3. **仅作技术学习交流**：本开源版仅用于架构审计、协议学习与基础联通演示；生产环境使用或需要提权 TUN 与环境指纹防风控全套能力，请前往官方下载。
 
 ---
 
 ## 开源协议与官方完整版
 
 - **开源协议**：[MIT License](./LICENSE)
-- **官方完整版下载（含强代理 TUN、提权管理、完整指纹容器与全链路诊断）**：[https://dingtu.noyapi.cn/download](https://dingtu.noyapi.cn/download)
+- **官方完整版下载（含 17 款 AI 完整协同 + 提权强代理 TUN + 全维环境指纹加强与防风控）**：[https://dingtu.noyapi.cn/download](https://dingtu.noyapi.cn/download)

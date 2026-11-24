@@ -18,7 +18,7 @@
 ---
 
 > [!IMPORTANT]
-> **开源学习交流版说明**：Android `v0.1.0` 遵循纯正原生架构（Kotlin + Jetpack Compose + `sing-box v1.14.2` `libbox.aar` + Android `VpnService`），已在开源版中 **剥离严格路由防泄露（`strict_route`）、QUIC 阻断规则以及系统时区/语言对齐风险比对与深度 DoH 泄露审计**，仅保留 **基础 TUN 联通、按应用/全局分流与基础可达性检测**。完整版请前往官网下载：**[https://dingtu.noyapi.cn/download](https://dingtu.noyapi.cn/download)**。
+> **开源学习交流版说明**：Android `v0.1.0` 与定途 [桌面端 2.0 AI 工作台](../desktop/README.md) 配套协同（桌面端负责 17 款 AI Agent 多账号无缝切换与多开，移动端专注随身 AI 应用按应用分流 VPN 与跨端用量/工单管理）。本开源版基于 Kotlin + Jetpack Compose + `sing-box v1.14.2` `libbox.aar` + Android `VpnService`，**已精确剥离严格防泄露路由锁（`strict_route`）、QUIC 协议阻断规则以及出口时区/语言一致性风控比对与深度 DoH 泄露审计**，仅保留 **基础 TUN 联通与基础外网探测**。完整版请前往官网下载：**[https://dingtu.noyapi.cn/download](https://dingtu.noyapi.cn/download)**。
 
 ---
 
@@ -37,14 +37,14 @@
         <img src="app/src/main/res/drawable-nodpi/logo_app_gemini.png" width="48" alt="Gemini" />&nbsp;&nbsp;
         <img src="app/src/main/res/drawable-nodpi/logo_app_grok.png" width="48" alt="Grok" />
       </p>
-      <sub><b>内置常用 AI 应用按应用分流快捷矩阵</b></sub>
+      <sub><b>内置常用移动端 AI 应用按应用分流快捷矩阵</b></sub>
     </td>
   </tr>
 </table>
 
 ---
 
-## 架构概览与开源版裁剪细节
+## 架构概览与「防风控 / 防泄露增强」剥离说明
 
 ```mermaid
 flowchart LR
@@ -60,14 +60,14 @@ flowchart LR
     Ctrl --> Lease --> Ver --> VPN
 ```
 
-### 本版本与官方完整版差异
+### 开源版剥离 vs 完整官方版
 
-| 模块文件 | 开源版改动 | 功能说明 |
+| 模块 / 能力 | 开源学习交流版处置 | 官网完整版加强能力（[dingtu.noyapi.cn/download](https://dingtu.noyapi.cn/download)） |
 | --- | --- | --- |
-| `config/AndroidLibboxConfigBuilder.kt` | **剥离** `strict_route` 与 `quic` 拒绝规则 | 保留 gVisor `tun-in` + `vless` `noya-device` + `sniff` + `hijack-dns` 2 条基础路由规则，禁止注入 `direct` 出站 |
-| `diagnostics/ExitSelfCheckService.kt` | **简化为** `BasicConnectivityCheckService` | 移除 `TimezoneAlignmentState` 时区一致性对齐建议与 DoH 延时防泄露审计，保留基础外网连通探测与出口 IP 脱敏展示 |
-| `ui/screens/ConnectTabScreen.kt` | **新增开源提示卡片** | 在连接主页显著展示「开源学习交流版」说明与官网完整版下载入口 |
-| `scripts/build-libbox.ps1` | **环境变量参数化** | 改用 `$env:SINGBOX_SRC_DIR`、`ANDROID_HOME`、`JAVA_HOME`、`TEMP`，移除硬编码本机路径 |
+| **TUN 防泄露与协议规则** (`config/AndroidLibboxConfigBuilder.kt`) | **剥离** `strict_route: true` 与 `{"protocol":["quic"],"action":"reject"}`；保留 `gvisor` `tun-in` + 已验签单 `vless` 出站（零 `direct`）+ `sniff` + `hijack-dns` 基础路由 | 强制开启 `strict_route: true` 防泄露锁并阻断 QUIC 回退通道，确保受管 AI 应用 DNS 与流量零本地泄漏 |
+| **环境风控自检与泄露审计** (`diagnostics/ExitSelfCheckService.kt` / `ConnectTabScreen.kt`) | **简化为** `BasicConnectivityCheckService`；移除 `TimezoneAlignmentState` 出口时区对齐比对与 DoH 延时泄露审计，主页常驻展示「开源学习交流版」及官网完整版下载按钮 | 实时比对手机系统时区与分配出口的 IANA 时区一致性风险提示、自动探测远端 DoH 解析延时与受管边界合规报告 |
+| **基础按应用 / 全局分流与账户体系** (`vpn/`、`auth/`、`storage/`、`ui/`) | **完整保留**：PKCE 登录、Android Keystore 安全存储、`CLOCK_BOOTTIME` 单调时钟租约续签、按应用/全局 `VpnService` 切换与跨端用量/工单查看 | 与桌面端 17 款 AI 工作台同一账号共享套餐权益、设备管理、用量大盘与服务工单 |
+| **编译辅助脚本** (`scripts/build-libbox.ps1`) | **环境变量化**：使用 `$env:SINGBOX_SRC_DIR`、`ANDROID_HOME`、`JAVA_HOME`、`TEMP`，移除硬编码本机路径 | 同套可复现 `gomobile` 构建管线 |
 
 ---
 
@@ -78,7 +78,7 @@ flowchart LR
 ```powershell
 cd android
 $env:JAVA_HOME = "<你的 JDK 17+ 路径>"
-$env:ANDROID_HOME = "<你的 Android SDK 路径>"
+$env:ANDROID_HOME = "$env:LOCALAPPDATA\Android\Sdk"
 
 .\gradlew.bat testDebugUnitTest --no-daemon
 ```
@@ -101,4 +101,4 @@ $env:JAVA_HOME = "<本地 JDK 17+ 路径>"
 
 ## 获取完整官方版
 
-需要严格路由防泄露、系统时区对齐自检与全部商用稳定性能力的完整客户端，请访问官网下载页：**[https://dingtu.noyapi.cn/download](https://dingtu.noyapi.cn/download)**。
+需要完整环境指纹加强、提权强代理 TUN、`strict_route` 严防泄露与 17 款 AI Agent 完整商用工作台体验，请访问官网下载页：**[https://dingtu.noyapi.cn/download](https://dingtu.noyapi.cn/download)**。
