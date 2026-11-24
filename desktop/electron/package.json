@@ -1,0 +1,98 @@
+{
+  "name": "dingtu-desktop",
+  "version": "0.2.0",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "main": "main.mjs",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test *.test.mjs",
+    "check:trust": "node production-trust.mjs",
+    "pack": "node sync-renderer.cjs && electron-builder --win nsis --mac dmg --linux AppImage deb",
+    "pack:win": "node sync-renderer.cjs && electron-builder --win portable --publish never"
+  },
+  "devDependencies": {
+    "electron": "^37.0.0",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "cn.dingtu.desktop",
+    "productName": "定途",
+    "files": [
+      "main.mjs",
+      "preload.cjs",
+      "runtime-contract.mjs",
+      "control-client.mjs",
+      "client-projection.mjs",
+      "desktop-ipc.mjs",
+      "device-auth.mjs",
+      "pkce.mjs",
+      "pkce-loopback.mjs",
+      "app-launcher.mjs",
+      "app-process-restarter.mjs",
+      "agent-supervisor.mjs",
+      "agent-profiles.mjs",
+      "builtin-agent-adapters.mjs",
+      "agent-instance-host.mjs",
+      "workbench-accounts.mjs",
+      "local-account-importers.mjs",
+      "antigravity-credential-helper.mjs",
+      "oauth-account-flow.mjs",
+      "oauth-browser-window.mjs",
+      "external-oauth-browser.mjs",
+      "local-usage-scanner.mjs",
+      "wakeup-scheduler.mjs",
+      "telemetry-sync.mjs",
+      "local-proxy.mjs",
+      "diagnostics.mjs",
+      "device-session-store.mjs",
+      "electron-device-session-store.mjs",
+      "safe-environment.mjs",
+      "environment-mode.mjs",
+      "relay-directory.mjs",
+      "concurrency-policy.mjs",
+      "index.html",
+      "styles.css",
+      "app.js",
+      "assistant-data.js",
+      "assistant-catalog.js",
+      "local-tools.js",
+      "totp-qr.js",
+      "assets/**/*",
+      "auth-audit.mjs",
+      "isolated-browser.mjs",
+      "production-trust.mjs",
+      "production-tunnel.mjs",
+      "production-proxy.mjs",
+      "production-config-policy.mjs"
+    ],
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ]
+    },
+    "extraResources": [
+      {
+        "to": "sing-box",
+        "filter": [
+          "**/*"
+        ],
+        "from": "../runtime/sing-box"
+      }
+    ],
+    "icon": "assets/branding/dingtu-round.ico",
+    "beforePack": "./sync-renderer.cjs"
+  }
+}

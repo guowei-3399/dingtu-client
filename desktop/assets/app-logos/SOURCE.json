@@ -1,0 +1,49 @@
+{
+  "retrieved": "2026-10-22",
+  "notice": "Original first-party brand assets. Marks remain property of their respective owners; no affiliation or endorsement is implied.",
+  "sources": {
+    "claude.png": {
+      "page": "https://claude.com/",
+      "url": "https://claude.com/icon.png",
+      "sha256": "ce7e8cafe276c4d6820387652d77437772fb2efa7511bff92a4e7664cd2bee51"
+    },
+    "openai.png": {
+      "page": "https://github.com/openai/codex",
+      "url": "https://avatars.githubusercontent.com/u/14957082?s=200&v=4",
+      "note": "OpenAI official organization profile mark, shared provider mark for Codex and ChatGPT.",
+      "sha256": "6025a4347a8eaed17e31eaebf7834e33ec4af26cc7f59be586ac59ba5157fa1c"
+    },
+    "cursor.svg": {
+      "page": "https://cursor.com/",
+      "url": "https://cursor.com/marketing-static/favicon-light.svg",
+      "sha256": "78f169abca311d70e18ada789ccf1a55b4ca0306822f21a9ab0c2658ed88dbe0"
+    },
+    "gemini.png": {
+      "page": "https://gemini.google.com/",
+      "url": "https://www.gstatic.com/lamda/images/gemini_sparkle_4g_512_lt_f94943af3be039176192d.png",
+      "sha256": "5e7cfecaa53f4f65a313fe89b0f389548126544a78fad8489510c70ae641a4a1"
+    },
+    "copilot.svg": {
+      "page": "https://github.com/features/copilot",
+      "url": "https://github.com/features/copilot",
+      "note": "Unchanged octicon-copilot SVG from official page; XML namespace added for standalone image loading.",
+      "sha256": "6a03e0e58c1fc0f7efdab63eec71076c6377e203daa024acbd06a064e285bbb5"
+    },
+    "grok.png": {
+      "page": "https://grok.com/",
+      "url": "https://grok.com/icon-512x512.png",
+      "sha256": "0e6652d4a3a88dae927e93a644e9f97a9d0efbdf2437e876c22e876f8f4322d5"
+    },
+    "meta.svg": {
+      "page": "https://about.meta.com/",
+      "url": "https://static.xx.fbcdn.net/rsrc.php/yf/r/-7pQO6hUGK_.svg",
+      "note": "Official parent-company mark only. Muse-specific product logo and official product URL remain unverified.",
+      "sha256": "9c354dc7d40f7862df2dfb34df05ae08c3e956d55a450379803d6cac6878a63e"
+    },
+    "manus.svg": {
+      "page": "https://manus.im/",
+      "url": "https://manus.im/icon.svg?icon.2kbcs13ndm9it.svg",
+      "sha256": "ee7825396fb63d32477c6f4728cbdc4e6e31963effc961542e9be326955c77bf"
+    }
+  }
+}

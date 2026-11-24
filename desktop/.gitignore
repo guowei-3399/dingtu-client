@@ -1,0 +1,10 @@
+.impeccable/review/
+.runtime/
+.omc/
+
+electron/node_modules/
+electron/.npm-cache/
+electron/dist/
+electron/cache.db
+runtime/sing-box/win32-x64/sing-box.zip
+

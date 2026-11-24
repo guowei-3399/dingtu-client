@@ -1,0 +1,495 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-22T10:16:33.743608+08:00",
+  "title": "Design System: 定途连接助手",
+  "extensions": {
+    "colorMeta": {
+      "canvas-light": {
+        "role": "neutral",
+        "displayName": "canvas-light",
+        "canonical": "#f4f4fa",
+        "tonalRamp": [
+          "oklch(15% 0.00797 286.25)",
+          "oklch(26% 0.00797 286.25)",
+          "oklch(38% 0.00797 286.25)",
+          "oklch(49% 0.00797 286.25)",
+          "oklch(61% 0.00797 286.25)",
+          "oklch(72% 0.00797 286.25)",
+          "oklch(84% 0.00797 286.25)",
+          "oklch(95% 0.00797 286.25)"
+        ]
+      },
+      "rail-light": {
+        "role": "neutral",
+        "displayName": "rail-light",
+        "canonical": "#f0f0f8",
+        "tonalRamp": [
+          "oklch(15% 0.01066 286.20)",
+          "oklch(26% 0.01066 286.20)",
+          "oklch(38% 0.01066 286.20)",
+          "oklch(49% 0.01066 286.20)",
+          "oklch(61% 0.01066 286.20)",
+          "oklch(72% 0.01066 286.20)",
+          "oklch(84% 0.01066 286.20)",
+          "oklch(95% 0.01066 286.20)"
+        ]
+      },
+      "panel-light": {
+        "role": "neutral",
+        "displayName": "panel-light",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0.00000 89.88)",
+          "oklch(26% 0.00000 89.88)",
+          "oklch(38% 0.00000 89.88)",
+          "oklch(49% 0.00000 89.88)",
+          "oklch(61% 0.00000 89.88)",
+          "oklch(72% 0.00000 89.88)",
+          "oklch(84% 0.00000 89.88)",
+          "oklch(95% 0.00000 89.88)"
+        ]
+      },
+      "layer-light": {
+        "role": "neutral",
+        "displayName": "layer-light",
+        "canonical": "#f5f5fa",
+        "tonalRamp": [
+          "oklch(15% 0.00663 286.28)",
+          "oklch(26% 0.00663 286.28)",
+          "oklch(38% 0.00663 286.28)",
+          "oklch(49% 0.00663 286.28)",
+          "oklch(61% 0.00663 286.28)",
+          "oklch(72% 0.00663 286.28)",
+          "oklch(84% 0.00663 286.28)",
+          "oklch(95% 0.00663 286.28)"
+        ]
+      },
+      "ink-light": {
+        "role": "neutral",
+        "displayName": "ink-light",
+        "canonical": "#252536",
+        "tonalRamp": [
+          "oklch(15% 0.03135 284.13)",
+          "oklch(26% 0.03135 284.13)",
+          "oklch(38% 0.03135 284.13)",
+          "oklch(49% 0.03135 284.13)",
+          "oklch(61% 0.03135 284.13)",
+          "oklch(72% 0.03135 284.13)",
+          "oklch(84% 0.03135 284.13)",
+          "oklch(95% 0.03135 284.13)"
+        ]
+      },
+      "muted-light": {
+        "role": "neutral",
+        "displayName": "muted-light",
+        "canonical": "#666679",
+        "tonalRamp": [
+          "oklch(15% 0.02977 285.31)",
+          "oklch(26% 0.02977 285.31)",
+          "oklch(38% 0.02977 285.31)",
+          "oklch(49% 0.02977 285.31)",
+          "oklch(61% 0.02977 285.31)",
+          "oklch(72% 0.02977 285.31)",
+          "oklch(84% 0.02977 285.31)",
+          "oklch(95% 0.02977 285.31)"
+        ]
+      },
+      "subtle-light": {
+        "role": "neutral",
+        "displayName": "subtle-light",
+        "canonical": "#6b6b7a",
+        "tonalRamp": [
+          "oklch(15% 0.02328 285.58)",
+          "oklch(26% 0.02328 285.58)",
+          "oklch(38% 0.02328 285.58)",
+          "oklch(49% 0.02328 285.58)",
+          "oklch(61% 0.02328 285.58)",
+          "oklch(72% 0.02328 285.58)",
+          "oklch(84% 0.02328 285.58)",
+          "oklch(95% 0.02328 285.58)"
+        ]
+      },
+      "line-light": {
+        "role": "neutral",
+        "displayName": "line-light",
+        "canonical": "#e9e9f2",
+        "tonalRamp": [
+          "oklch(15% 0.01206 286.16)",
+          "oklch(26% 0.01206 286.16)",
+          "oklch(38% 0.01206 286.16)",
+          "oklch(49% 0.01206 286.16)",
+          "oklch(61% 0.01206 286.16)",
+          "oklch(72% 0.01206 286.16)",
+          "oklch(84% 0.01206 286.16)",
+          "oklch(95% 0.01206 286.16)"
+        ]
+      },
+      "accent-light": {
+        "role": "primary",
+        "displayName": "accent-light",
+        "canonical": "#2172d6",
+        "tonalRamp": [
+          "oklch(15% 0.17146 256.39)",
+          "oklch(26% 0.17146 256.39)",
+          "oklch(38% 0.17146 256.39)",
+          "oklch(49% 0.17146 256.39)",
+          "oklch(61% 0.17146 256.39)",
+          "oklch(72% 0.17146 256.39)",
+          "oklch(84% 0.17146 256.39)",
+          "oklch(95% 0.17146 256.39)"
+        ]
+      },
+      "accent-soft-light": {
+        "role": "primary",
+        "displayName": "accent-soft-light",
+        "canonical": "#e9f2ff",
+        "tonalRamp": [
+          "oklch(15% 0.01997 257.47)",
+          "oklch(26% 0.01997 257.47)",
+          "oklch(38% 0.01997 257.47)",
+          "oklch(49% 0.01997 257.47)",
+          "oklch(61% 0.01997 257.47)",
+          "oklch(72% 0.01997 257.47)",
+          "oklch(84% 0.01997 257.47)",
+          "oklch(95% 0.01997 257.47)"
+        ]
+      },
+      "accent-ink-light": {
+        "role": "primary",
+        "displayName": "accent-ink-light",
+        "canonical": "#246ec5",
+        "tonalRamp": [
+          "oklch(15% 0.15327 255.22)",
+          "oklch(26% 0.15327 255.22)",
+          "oklch(38% 0.15327 255.22)",
+          "oklch(49% 0.15327 255.22)",
+          "oklch(61% 0.15327 255.22)",
+          "oklch(72% 0.15327 255.22)",
+          "oklch(84% 0.15327 255.22)",
+          "oklch(95% 0.15327 255.22)"
+        ]
+      },
+      "canvas-dark": {
+        "role": "neutral",
+        "displayName": "canvas-dark",
+        "canonical": "#17171f",
+        "tonalRamp": [
+          "oklch(15% 0.01576 284.95)",
+          "oklch(26% 0.01576 284.95)",
+          "oklch(38% 0.01576 284.95)",
+          "oklch(49% 0.01576 284.95)",
+          "oklch(61% 0.01576 284.95)",
+          "oklch(72% 0.01576 284.95)",
+          "oklch(84% 0.01576 284.95)",
+          "oklch(95% 0.01576 284.95)"
+        ]
+      },
+      "rail-dark": {
+        "role": "neutral",
+        "displayName": "rail-dark",
+        "canonical": "#13131b",
+        "tonalRamp": [
+          "oklch(15% 0.01612 284.77)",
+          "oklch(26% 0.01612 284.77)",
+          "oklch(38% 0.01612 284.77)",
+          "oklch(49% 0.01612 284.77)",
+          "oklch(61% 0.01612 284.77)",
+          "oklch(72% 0.01612 284.77)",
+          "oklch(84% 0.01612 284.77)",
+          "oklch(95% 0.01612 284.77)"
+        ]
+      },
+      "panel-dark": {
+        "role": "neutral",
+        "displayName": "panel-dark",
+        "canonical": "#24242f",
+        "tonalRamp": [
+          "oklch(15% 0.02040 284.92)",
+          "oklch(26% 0.02040 284.92)",
+          "oklch(38% 0.02040 284.92)",
+          "oklch(49% 0.02040 284.92)",
+          "oklch(61% 0.02040 284.92)",
+          "oklch(72% 0.02040 284.92)",
+          "oklch(84% 0.02040 284.92)",
+          "oklch(95% 0.02040 284.92)"
+        ]
+      },
+      "layer-dark": {
+        "role": "neutral",
+        "displayName": "layer-dark",
+        "canonical": "#2b2b38",
+        "tonalRamp": [
+          "oklch(15% 0.02349 284.87)",
+          "oklch(26% 0.02349 284.87)",
+          "oklch(38% 0.02349 284.87)",
+          "oklch(49% 0.02349 284.87)",
+          "oklch(61% 0.02349 284.87)",
+          "oklch(72% 0.02349 284.87)",
+          "oklch(84% 0.02349 284.87)",
+          "oklch(95% 0.02349 284.87)"
+        ]
+      },
+      "ink-dark": {
+        "role": "neutral",
+        "displayName": "ink-dark",
+        "canonical": "#f4f3fb",
+        "tonalRamp": [
+          "oklch(15% 0.01067 291.95)",
+          "oklch(26% 0.01067 291.95)",
+          "oklch(38% 0.01067 291.95)",
+          "oklch(49% 0.01067 291.95)",
+          "oklch(61% 0.01067 291.95)",
+          "oklch(72% 0.01067 291.95)",
+          "oklch(84% 0.01067 291.95)",
+          "oklch(95% 0.01067 291.95)"
+        ]
+      },
+      "muted-dark": {
+        "role": "neutral",
+        "displayName": "muted-dark",
+        "canonical": "#b5b4c6",
+        "tonalRamp": [
+          "oklch(15% 0.02538 288.35)",
+          "oklch(26% 0.02538 288.35)",
+          "oklch(38% 0.02538 288.35)",
+          "oklch(49% 0.02538 288.35)",
+          "oklch(61% 0.02538 288.35)",
+          "oklch(72% 0.02538 288.35)",
+          "oklch(84% 0.02538 288.35)",
+          "oklch(95% 0.02538 288.35)"
+        ]
+      },
+      "subtle-dark": {
+        "role": "neutral",
+        "displayName": "subtle-dark",
+        "canonical": "#aaa9bd",
+        "tonalRamp": [
+          "oklch(15% 0.02855 287.98)",
+          "oklch(26% 0.02855 287.98)",
+          "oklch(38% 0.02855 287.98)",
+          "oklch(49% 0.02855 287.98)",
+          "oklch(61% 0.02855 287.98)",
+          "oklch(72% 0.02855 287.98)",
+          "oklch(84% 0.02855 287.98)",
+          "oklch(95% 0.02855 287.98)"
+        ]
+      },
+      "line-dark": {
+        "role": "neutral",
+        "displayName": "line-dark",
+        "canonical": "#333341",
+        "tonalRamp": [
+          "oklch(15% 0.02464 284.96)",
+          "oklch(26% 0.02464 284.96)",
+          "oklch(38% 0.02464 284.96)",
+          "oklch(49% 0.02464 284.96)",
+          "oklch(61% 0.02464 284.96)",
+          "oklch(72% 0.02464 284.96)",
+          "oklch(84% 0.02464 284.96)",
+          "oklch(95% 0.02464 284.96)"
+        ]
+      },
+      "accent-dark": {
+        "role": "primary",
+        "displayName": "accent-dark",
+        "canonical": "#4698ff",
+        "tonalRamp": [
+          "oklch(15% 0.17211 255.61)",
+          "oklch(26% 0.17211 255.61)",
+          "oklch(38% 0.17211 255.61)",
+          "oklch(49% 0.17211 255.61)",
+          "oklch(61% 0.17211 255.61)",
+          "oklch(72% 0.17211 255.61)",
+          "oklch(84% 0.17211 255.61)",
+          "oklch(95% 0.17211 255.61)"
+        ]
+      },
+      "accent-soft-dark": {
+        "role": "primary",
+        "displayName": "accent-soft-dark",
+        "canonical": "#253b59",
+        "tonalRamp": [
+          "oklch(15% 0.05975 256.42)",
+          "oklch(26% 0.05975 256.42)",
+          "oklch(38% 0.05975 256.42)",
+          "oklch(49% 0.05975 256.42)",
+          "oklch(61% 0.05975 256.42)",
+          "oklch(72% 0.05975 256.42)",
+          "oklch(84% 0.05975 256.42)",
+          "oklch(95% 0.05975 256.42)"
+        ]
+      },
+      "accent-ink-dark": {
+        "role": "primary",
+        "displayName": "accent-ink-dark",
+        "canonical": "#9bc9ff",
+        "tonalRamp": [
+          "oklch(15% 0.09075 252.86)",
+          "oklch(26% 0.09075 252.86)",
+          "oklch(38% 0.09075 252.86)",
+          "oklch(49% 0.09075 252.86)",
+          "oklch(61% 0.09075 252.86)",
+          "oklch(72% 0.09075 252.86)",
+          "oklch(84% 0.09075 252.86)",
+          "oklch(95% 0.09075 252.86)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "body": {
+        "displayName": "正文",
+        "purpose": "系统字体，基准14px，常用正文13px。"
+      },
+      "greeting": {
+        "displayName": "问候标题",
+        "purpose": "桌面26px、手机24px。"
+      },
+      "status-title": {
+        "displayName": "连接状态标题",
+        "purpose": "桌面19px、手机16px。"
+      },
+      "label": {
+        "displayName": "辅助标签",
+        "purpose": "12px工具名与次要信息。"
+      }
+    },
+    "shadows": [
+      {
+        "name": "panel-light",
+        "value": "0 10px 30px rgba(82,78,136,.055)",
+        "purpose": "浅色面板轻柔抬高。"
+      },
+      {
+        "name": "panel-dark",
+        "value": "0 10px 28px rgba(0,0,0,.12)",
+        "purpose": "暗色面板层次。"
+      },
+      {
+        "name": "dock-mobile",
+        "value": "0 10px 35px rgba(59,55,111,.13)",
+        "purpose": "移动浮动导航。"
+      },
+      {
+        "name": "dock-desktop",
+        "value": "0 10px 28px rgba(59,55,111,.1)",
+        "purpose": "桌面连接胶囊。"
+      },
+      {
+        "name": "tool-blue",
+        "value": "0 7px 12px rgba(45,132,239,.2)",
+        "purpose": "蓝色立体工具图标下方投影。"
+      }
+    ],
+    "motion": [
+      {
+        "name": "control",
+        "value": "160ms",
+        "purpose": "颜色、透明度和按压反馈；减少动态偏好下关闭。"
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1100px"
+      },
+      {
+        "name": "full-mobile-dock",
+        "value": "800px"
+      },
+      {
+        "name": "phone",
+        "value": "560px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "主操作",
+      "kind": "button",
+      "description": "权限与状态处理的普通主操作。",
+      "html": "<button class=\"ds-primary\">确认</button>",
+      "css": ".ds-primary{font:inherit;min-height:44px;padding:0 16px;border:0;border-radius:13px;background:var(--accent,#2172d6);color:#fff;font-size:13px;font-weight:550;cursor:pointer;transition:background-color 160ms,color 160ms,opacity 160ms}.ds-primary:hover{background:var(--accent-hover,#1762c1)}.ds-primary:focus-visible{outline:2px solid var(--focus,#327fe7);outline-offset:4px}:host-context([data-theme=dark]) .ds-primary{color:#102039}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}",
+      "refersTo": "button-primary"
+    },
+    {
+      "name": "次操作",
+      "kind": "button",
+      "description": "选定工具行的补充操作。",
+      "html": "<button class=\"ds-secondary\">打开方式</button>",
+      "css": ".ds-secondary{font:inherit;min-height:44px;padding:0 16px;background:var(--panel,#fff);color:var(--ink,#252536);border:0;border-radius:13px;font-size:13px;font-weight:550;cursor:pointer}.ds-secondary:hover{background:var(--hover,#ededf7)}.ds-secondary:focus-visible{outline:2px solid var(--focus,#327fe7);outline-offset:4px}",
+      "refersTo": "button-secondary"
+    },
+    {
+      "name": "当前导航",
+      "kind": "nav",
+      "description": "桌面侧栏的选中导航。",
+      "html": "<button class=\"ds-nav\" aria-current=\"page\">连接</button>",
+      "css": ".ds-nav{font:inherit;min-height:46px;border:0;border-radius:14px;padding:0 14px;color:var(--accent-ink,#246ec5);background:var(--accent-soft,#e9f2ff);font-size:13px;font-weight:550;cursor:pointer}.ds-nav:hover{background:var(--hover,#ededf7)}.ds-nav:focus-visible{outline:2px solid var(--focus,#327fe7);outline-offset:4px}"
+    },
+    {
+      "name": "只读状态",
+      "kind": "chip",
+      "description": "标签为信息，不是选择出口的控件。",
+      "html": "<span class=\"ds-status\">服务端绑定</span>",
+      "css": ".ds-status{display:inline-flex;align-items:center;gap:6px;font:inherit;font-size:12px;padding:4px 7px;border-radius:6px;color:var(--good,#228268);background:var(--good-soft,#e8f6ef)}"
+    },
+    {
+      "name": "柔和面板",
+      "kind": "card",
+      "description": "采用圆润表面与下方柔和投影。",
+      "html": "<section class=\"ds-panel\"><h2>常用工具</h2></section>",
+      "css": ".ds-panel{font:inherit;padding:22px 18px 18px;color:var(--ink,#252536);background:var(--panel,#fff);border:0;border-radius:26px;box-shadow:var(--panel-shadow,0 10px 30px rgba(82,78,136,.055))}.ds-panel h2{font-size:16px;line-height:1.4;font-weight:650;margin:0}@media(max-width:560px){.ds-panel{padding:20px 10px 14px;border-radius:24px}}",
+      "refersTo": "panel"
+    },
+    {
+      "name": "立体工具图标",
+      "kind": "custom",
+      "description": "渐变、内侧高光和投影形成厚度；SVG保持清晰。",
+      "html": "<button class=\"ds-tile\"><span class=\"ds-dimensional\"><span class=\"ds-inlay\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m5 7 5 5-5 5m8 0h6\"/></svg></span></span><strong>Claude Code</strong></button>",
+      "css": ".ds-tile{font:inherit;display:flex;flex-direction:column;align-items:center;gap:11px;min-height:100px;border:0;background:transparent;color:var(--ink,#252536);border-radius:17px;padding:0 3px 5px;cursor:pointer}.ds-tile:hover{background:var(--layer,#f5f5fa)}.ds-tile:focus-visible{outline:2px solid var(--focus,#327fe7);outline-offset:4px}.ds-tile strong{font-size:12px;font-weight:550}.ds-dimensional{position:relative;display:grid;place-items:center;width:58px;height:58px;border-radius:18px;background:linear-gradient(145deg,#539fff,#2b7fec);box-shadow:0 7px 12px rgba(45,132,239,.2);overflow:hidden}.ds-dimensional::before{content:\"\";position:absolute;inset:1px;border-radius:17px;box-shadow:inset 0 1px 1px rgba(255,255,255,.4);pointer-events:none}.ds-inlay{width:35px;height:35px;border-radius:10px;background:linear-gradient(145deg,rgba(255,255,255,.55),rgba(255,255,255,.13));display:grid;place-items:center;color:#fff}.ds-inlay svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}@media(max-width:560px){.ds-dimensional{width:51px;height:51px;border-radius:16px}.ds-inlay{width:32px;height:32px;border-radius:9px}}"
+    },
+    {
+      "name": "连接胶囊",
+      "kind": "custom",
+      "description": "桌面底部胶囊；手机同一动作移到五位置 Dock 中央凸起。",
+      "html": "<div class=\"ds-dock\"><button class=\"ds-connect\"><span class=\"ds-connect-symbol\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M12 3v9m-6.4-6.4a9 9 0 1 0 12.8 0\"/></svg></span>连接</button></div>",
+      "css": ".ds-dock{display:flex;justify-content:center;width:180px;min-height:64px;padding:8px 12px;border-radius:24px;background:var(--panel,#fff);box-shadow:0 10px 28px rgba(59,55,111,.1)}.ds-connect{font:inherit;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:48px;padding:0;border:0;background:transparent;color:var(--accent-ink,#246ec5);font-size:13px;font-weight:550;cursor:pointer}.ds-connect:focus-visible{outline:2px solid var(--focus,#327fe7);outline-offset:4px}.ds-connect-symbol{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#459aff,#2478f0);color:#fff;box-shadow:0 4px 10px rgba(40,126,239,.2)}.ds-connect-symbol svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}.ds-connect:hover .ds-connect-symbol{filter:brightness(1.07)}.ds-connect:active{transform:scale(.97)}@media(prefers-reduced-motion:reduce){.ds-connect{transition:none}}"
+    },
+    {
+      "name": "应用分类筛选",
+      "kind": "custom",
+      "description": "少量应用按类别直接选择，不提供搜索。",
+      "html": "<div class=\"ds-filters\"><button class=\"ds-filter\" aria-pressed=\"true\">全部</button><button class=\"ds-filter\" aria-pressed=\"false\">编程</button><button class=\"ds-clear\">清空搜索</button></div>",
+      "css": ".ds-filters{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin:18px 0 4px}.ds-filter{font:inherit;border:0;min-height:44px;border-radius:16px;padding:0 16px;font-size:13px;color:var(--muted,#666679);background:transparent;cursor:pointer}.ds-filter:hover{background:var(--hover,#ededf7)}.ds-filter[aria-pressed=true]{background:var(--panel,#fff);color:var(--accent-ink,#246ec5);font-weight:600;box-shadow:var(--panel-shadow,0 10px 30px rgba(82,78,136,.055))}.ds-filter:focus-visible{outline:2px solid var(--focus,#327fe7);outline-offset:4px}@media(max-width:560px){.ds-filters{gap:4px}.ds-filter{padding:0 12px}}"
+    },
+    {
+      "name": "我的账号面板",
+      "kind": "card",
+      "description": "显示主站真实资料与登录入口；未订阅如实显示，模拟身份不覆盖账号。",
+      "html": "<section class=\"ds-account\"><span class=\"ds-avatar\">访</span><div><strong>访客</strong><p>未登录</p></div><button class=\"ds-manage\">登录 / 注册</button></section>",
+      "css": ".ds-account{font:inherit;display:flex;align-items:center;gap:13px;background:var(--panel,#fff);color:var(--ink,#252536);box-shadow:var(--panel-shadow,0 10px 30px rgba(82,78,136,.055));border-radius:24px;padding:20px 22px}.ds-avatar{display:grid;place-items:center;flex-shrink:0;width:47px;height:47px;border-radius:50%;font-size:18px;font-weight:550;color:#fff;background:linear-gradient(145deg,#a07af5,#4c9fee);box-shadow:0 6px 16px rgba(120,105,214,.15)}.ds-account>div{flex:1;min-width:0}.ds-account strong{display:block;font-size:16px;font-weight:650}.ds-account p{font-size:12px;color:var(--muted,#666679);margin:4px 0 0}.ds-manage{font:inherit;min-height:44px;padding:0 12px;border:0;border-radius:13px;background:var(--panel,#fff);color:var(--ink,#252536);font-size:12px;cursor:pointer}.ds-manage:hover{background:var(--hover,#ededf7)}.ds-manage:focus-visible{outline:2px solid var(--focus,#327fe7);outline-offset:4px}@media(max-width:560px){.ds-account{padding:18px 16px;gap:11px}.ds-avatar{width:42px;height:42px}.ds-manage{font-size:12px;padding:0 10px}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "柔和工具台，连接后继续工作。",
+    "overview": "沿用参考图的柔和灰紫背景、圆形头像、大圆角面板、彩色立体图标和底部中央连接动作。少量应用直接选择，不提供搜索。我的复用主站账号与会话；网络仍为演示。主站仅增加同源挂载与精确登录回跳，后台及登录视觉不变。",
+    "keyCharacteristics": [
+      "灰紫底色和柔和投影形成层次，蓝色承担连接与选中动作。",
+      "首页包含APP宣传Hero、四个常用工具和选定应用行，操作后的连接反馈单独显示。",
+      "手机默认暗色，Windows、macOS 默认亮色，保留手动明暗切换。",
+      "设备偏好刷新保留；本机通知、帮助、诊断留在我的次级页面，不增加首页密度。"
+    ],
+    "rules": [],
+    "dos": [
+      "Do 让底部连接操作与所选应用打开动作各自承担明确职责。",
+      "Do 保留应用分类；我的显示主站真实账号及未登录、同步失败状态。",
+      "Do 按平台显示候选应用，明确待验证能力与示例数据。",
+      "Do 清楚区分保存本机偏好、真实主站账号、模拟网络状态与尚未实现的原生能力。"
+    ],
+    "donts": [
+      "Don't 将应用图标或候选入口解释为已经验证原生支持。",
+      "Don't 将启动、网络接通与官方账号登录混为一个状态。",
+      "Don't 将网页原型当作已经交付的原生 VPN 客户端。"
+    ]
+  }
+}

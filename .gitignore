@@ -1,0 +1,27 @@
+# Node / Electron build artifacts
+node_modules/
+desktop/node_modules/
+desktop/electron/node_modules/
+desktop/dist/
+desktop/electron/dist/
+
+# Android / Gradle build & local IDE state
+android/.gradle/
+android/build/
+android/app/build/
+android/.kotlin/
+android/local.properties
+*.iml
+.idea/
+
+# Signing keys & local environment overrides
+*.keystore
+*.jks
+.env
+.env.*
+
+# Logs & OS clutter
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db

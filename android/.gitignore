@@ -1,0 +1,29 @@
+# Gradle & Android build artifacts
+.gradle/
+.kotlin/
+build/
+app/build/
+*/build/
+captures/
+.cxx/
+.externalNativeBuild/
+
+# Local machine config & signing secrets (NEVER commit)
+local.properties
+*.jks
+*.keystore
+signing.properties
+google-services.json
+
+# Packaged binaries & releases (NEVER commit)
+*.apk
+*.aab
+*.apks
+
+# IDE & OS files
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+.runtime/
+.omc/

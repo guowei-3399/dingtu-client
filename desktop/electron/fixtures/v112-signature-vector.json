@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "scope": "PUBLIC_TEST_ONLY_DO_NOT_DEPLOY",
+  "contractVersion": "1.12",
+  "contractSha256": "d064227a4371341d8755e1a57b0f7dcad1c8ea90de29b9769af14126908c1aad",
+  "origin": "https://production.example.invalid",
+  "nowMillis": 1794405600000,
+  "configPublicJwk": {
+    "crv": "Ed25519",
+    "x": "O2onvM62pC1io6jQKm8Nc2UyFXcd4kOmOsBIoYtZ2ik",
+    "kty": "OKP"
+  },
+  "configPublicSeedHex": "0000000000000000000000000000000000000000000000000000000000000000",
+  "devicePublicJwk": {
+    "crv": "Ed25519",
+    "x": "ebVWLo_mVPlAeLES6KmLp5AfhTrmlb7X4OORC60ElmQ",
+    "kty": "OKP"
+  },
+  "devicePublicSeedHex": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20",
+  "request": {
+    "authorizationHandle": "pah_AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8",
+    "deviceProof": "MgtiOtcJYuvj5hxVFWXyI2gcp6A4IEz-Er2z2oiVVuOdWTqrZ78SxVGsNzl2powuyJYrLxlIdNXfAWqD5vzLDA",
+    "issuedAt": "1794405600000",
+    "requestId": "req_11111111-1111-4111-8111-111111111111",
+    "requestedBy": "m-ui"
+  },
+  "deviceProofInput": "dingtu-tunnel-config-v1\nPOST\nhttps://production.example.invalid\n/api/v1/client/tunnel/config\nbd3cc39f5898fe8c9f08f303c2991d6b1af7d73ac6416a5e07bd2d35e5beded3\n1794405600000",
+  "deviceProofInputSha256": "a72286508692d8c1ddbc51e13ceb61c2e10f3319379d447f95f03bce32f092c1",
+  "envelope": {
+    "data_source": "production",
+    "deviceId": "22222222-2222-4222-8222-222222222222",
+    "authorizationHandleDigest": "bd3cc39f5898fe8c9f08f303c2991d6b1af7d73ac6416a5e07bd2d35e5beded3",
+    "bindingRevision": "binding-3",
+    "configRevision": "cfg-65da427ab1916d7d4e17e392f1d0a985b569c5018d61c196827965cf95256fb3",
+    "expiresAt": "2026-11-11T14:00:30.000Z",
+    "config": "{\"inbounds\":[{\"type\":\"mixed\",\"listen\":\"127.0.0.1\",\"listen_port\":17899}],\"outbounds\":[{\"type\":\"vless\",\"tag\":\"fixture-only\",\"server\":\"egress.example.invalid\",\"server_port\":443,\"uuid\":\"11111111-1111-4111-8111-111111111111\",\"tls\":{\"enabled\":true,\"server_name\":\"egress.example.invalid\"}}],\"route\":{\"final\":\"fixture-only\"}}",
+    "signature": {
+      "keyId": "ed25519-139e3940e64b5491722088d9a0d741628fc826e09475d341a780acde3c4b8070",
+      "value": "MSb1Bin8GfKB9f_eTDKt_Tpq5T5otUmGyphLQhrmEhUVi1dakpzy7aV5HDZ_T9h_tIDnXlUHybdmwLAqSMjlCg"
+    }
+  },
+  "configSigningInput": "dingtu-production-config-v1\nproduction\n22222222-2222-4222-8222-222222222222\nbd3cc39f5898fe8c9f08f303c2991d6b1af7d73ac6416a5e07bd2d35e5beded3\nbinding-3\ncfg-65da427ab1916d7d4e17e392f1d0a985b569c5018d61c196827965cf95256fb3\n2026-11-11T14:00:30.000Z\ned25519-139e3940e64b5491722088d9a0d741628fc826e09475d341a780acde3c4b8070\n65da427ab1916d7d4e17e392f1d0a985b569c5018d61c196827965cf95256fb3",
+  "configSigningInputSha256": "dc6614c09168e93ef807968ea3aa6a4b7908ba6a0809e53afda64345d21bf5c3",
+  "hmac": {
+    "secret": "PUBLIC-TEST-ONLY-NOT-A-DEPLOYMENT-SECRET-000000000000",
+    "timestamp": "1794405600000",
+    "requestId": "req_11111111-1111-4111-8111-111111111111",
+    "canonicalBody": "{\"authorizationHandle\":\"pah_AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8\",\"deviceProof\":\"MgtiOtcJYuvj5hxVFWXyI2gcp6A4IEz-Er2z2oiVVuOdWTqrZ78SxVGsNzl2powuyJYrLxlIdNXfAWqD5vzLDA\",\"issuedAt\":\"1794405600000\",\"requestId\":\"req_11111111-1111-4111-8111-111111111111\",\"requestedBy\":\"m-ui\"}",
+    "input": "dingtu-production-copy-v1.12\nPOST\n/api/internal/v1/production/authorization/copy\n1794405600000\nreq_11111111-1111-4111-8111-111111111111\n{\"authorizationHandle\":\"pah_AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8\",\"deviceProof\":\"MgtiOtcJYuvj5hxVFWXyI2gcp6A4IEz-Er2z2oiVVuOdWTqrZ78SxVGsNzl2powuyJYrLxlIdNXfAWqD5vzLDA\",\"issuedAt\":\"1794405600000\",\"requestId\":\"req_11111111-1111-4111-8111-111111111111\",\"requestedBy\":\"m-ui\"}",
+    "value": "8d9860e5ea7270f90c5ab31407bb865afde3690f5c21ec9c0e2fa916a5704f4d"
+  }
+}

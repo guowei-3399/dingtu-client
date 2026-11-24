@@ -1,0 +1,15 @@
+{
+  "origin": "https://dingtu.noyapi.cn",
+  "keys": {
+    "ed25519-56e1402e0b411015a6bebb50c7f79ae1910ee473f34200eba35eb95698798dc2": {
+      "kty": "OKP",
+      "crv": "Ed25519",
+      "x": "XKOb0qgh6AjKRIkVkiATXlEB1V57JIPA0-54eAV23p8",
+      "alg": "EdDSA",
+      "use": "sig",
+      "key_ops": [
+        "verify"
+      ]
+    }
+  }
+}

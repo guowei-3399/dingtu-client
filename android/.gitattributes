@@ -1,0 +1,9 @@
+* text=auto eol=lf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+*.aar binary
+*.jar binary
+*.png binary
+*.webp binary
+app/src/main/assets/production-trust.json binary
+app/src/test/resources/vectors/*.json binary
