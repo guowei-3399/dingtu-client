@@ -107,8 +107,8 @@
 - **网页应用多容器并发**：通过 `isolated-browser.mjs` 为不同实例生成基于 SHA-256 作用域哈希的 `persist:dingtu-browser-<hash>` 持久化 Chromium 会话分区，同一款网页 AI 工具（如 Claude Web、ChatGPT、Manus、Meta Muse）可同时打开多个独立登录实例，Cookie、IndexedDB 与 localStorage 物理完全隔离。
 
 <p align="center">
-  <img src="docs/screenshots/desktop-dark-account.png" alt="定途深色模式账号概览、流量配额与多开实例状态" width="88%" /><br/>
-  <sub><b>深色工作台视图：主站账号概览、可用流量与主/备出口配额，搭配上方「账号总览 / 会话用量 / 应用多开 / 唤醒任务 / 账户检测」多开管理页签</b></sub>
+  <img src="docs/screenshots/desktop-dark-account.png" alt="定途深色模式应用多开与独立存储容器隔离工作台" width="88%" /><br/>
+  <sub><b>深色应用多开视图：安全容器 / 隔离 Chrome / 隔离 Edge 多实例并行隔离运行，顶部集成「账号总览 / 会话用量 / 应用多开 / 唤醒任务 / 账户检测」管理页签</b></sub>
 </p>
 
 ### 3. 17 款 AI Agent 与应用全覆盖矩阵

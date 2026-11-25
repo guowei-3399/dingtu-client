@@ -82,8 +82,8 @@
 | **网页工作台容器** (`metamuse`, `manus`, `chatgpt`, `claude`, `gemini-web`, `grok`, `copilot`) | `isolated-browser.mjs` 按设备作用域+应用+实例生成 `persist:dingtu-browser-<sha256>` 独立分区，隔离 Cookie/Storage 并阻断本机/局域网端口扫描 | 同一官网支持多账号并发在线且永久保持登录态 |
 
 <p align="center">
-  <img src="../docs/screenshots/desktop-dark-account.png" alt="定途深色工作台账号概览与流量配额" width="88%" /><br/>
-  <sub><b>深色工作台账户视图与流量/主备出口概览</b></sub>
+  <img src="../docs/screenshots/desktop-dark-account.png" alt="定途深色模式应用多开与独立容器隔离视图" width="88%" /><br/>
+  <sub><b>深色应用多开视图：安全容器 / 隔离 Chrome / 隔离 Edge 多实例并行隔离管理</b></sub>
 </p>
 
 ### 3. 全收录 17 款 AI Agent 与应用清单
