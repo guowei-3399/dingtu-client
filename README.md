@@ -42,21 +42,21 @@
 
 ---
 
-## 视觉展示（双端界面与工作台资产）
+## 视觉展示（双端实机界面预览）
 
 <table>
   <tr>
     <td align="center" width="34%">
-      <img src="desktop/assets/connection-banner-v1.png" alt="定途桌面连接视图概念" width="100%" /><br/>
-      <sub><b>桌面端 `0.2.0` · 基础代理连接与通道总览</b></sub>
+      <img src="docs/screenshots/desktop-overview.png" alt="定途桌面端 v0.2.0 接入总览与通道连接界面" width="100%" /><br/>
+      <sub><b>桌面端 v0.2.0 · 基础代理连接与接入总览</b></sub>
     </td>
     <td align="center" width="33%">
-      <img src="desktop/assets/launch-promotion-v1.png" alt="定途 2.0 多应用工作台概念" width="100%" /><br/>
-      <sub><b>桌面端 `0.2.0` · 17 款 AI 工作台、多账号与多开面板</b></sub>
+      <img src="docs/screenshots/desktop-17-ai-plaza.png" alt="定途桌面端 v0.2.0 17 款 AI 工作台、多账号与多开广场" width="100%" /><br/>
+      <sub><b>桌面端 v0.2.0 · 17 款 AI 工作台、多账号与多开面板</b></sub>
     </td>
     <td align="center" width="33%">
-      <img src="android/app/src/main/res/drawable-nodpi/bg_connection_hero.jpg" alt="定途 Android 移动端连接背景" width="100%" /><br/>
-      <sub><b>Android `0.1.0` · 原生 Compose 按应用分流与随身管理</b></sub>
+      <img src="docs/screenshots/android-per-app-routing.png" alt="定途 Android v0.1.0 原生 Compose 按应用分流与一键连接界面" width="100%" /><br/>
+      <sub><b>Android v0.1.0 · 原生 Compose 按应用分流与随身管理</b></sub>
     </td>
   </tr>
 </table>

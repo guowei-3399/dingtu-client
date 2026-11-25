@@ -29,12 +29,12 @@
 <table>
   <tr>
     <td align="center" width="50%">
-      <img src="assets/connection-banner-v1.png" alt="连接与通道状态图" width="100%" /><br/>
-      <sub><b>基础代理联通模式（127.0.0.1:17899）与两态网络切换</b></sub>
+      <img src="../docs/screenshots/desktop-overview.png" alt="定途桌面端 v0.2.0 基础代理接入总览与通道连接界面" width="100%" /><br/>
+      <sub><b>接入总览：多账号 5h / Weekly 配额与基础代理联通状态</b></sub>
     </td>
     <td align="center" width="50%">
-      <img src="assets/launch-promotion-v1.png" alt="工作台多实例与账号面板" width="100%" /><br/>
-      <sub><b>多账号无缝切换 · 多实例应用多开 · 实时额度看板</b></sub>
+      <img src="../docs/screenshots/desktop-17-ai-plaza.png" alt="定途桌面端 v0.2.0 应用广场全收录 17 款 AI 工具" width="100%" /><br/>
+      <sub><b>应用广场：17 款 AI 工作台统一接入 · 多账号切换 · 应用多开</b></sub>
     </td>
   </tr>
 </table>

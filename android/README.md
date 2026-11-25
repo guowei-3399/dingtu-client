@@ -22,13 +22,13 @@
 
 ---
 
-## 移动端视觉资产
+## 移动端视觉与实机预览
 
 <table>
   <tr>
     <td align="center" width="52%">
-      <img src="app/src/main/res/drawable-nodpi/bg_connection_hero.jpg" alt="定途移动端主连接视效图" width="100%" /><br/>
-      <sub><b>主连接界面 Hero 视效卡片（自适应手机 / 平板断点）</b></sub>
+      <img src="../docs/screenshots/android-per-app-routing.png" alt="Android v0.1.0 原生 Compose 按应用分流与一键连接界面" width="100%" /><br/>
+      <sub><b>Android v0.1.0 · 原生 Compose 按应用分流与一键连接界面</b></sub>
     </td>
     <td align="center" width="48%">
       <p>
