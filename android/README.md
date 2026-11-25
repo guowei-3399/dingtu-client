@@ -27,8 +27,8 @@
 <table>
   <tr>
     <td align="center" width="52%">
-      <img src="../docs/screenshots/android-per-app-routing.png" alt="Android v0.1.0 原生 Compose 按应用分流与一键连接界面" width="100%" /><br/>
-      <sub><b>Android v0.1.0 · 原生 Compose 按应用分流与一键连接界面</b></sub>
+      <img src="../docs/screenshots/android-phone-connect-dark.png" alt="Android v0.1.0 竖屏原生 Compose 连接与按应用分流主页" width="200" /><br/>
+      <sub><b>Android v0.1.0 · 竖屏原生 Compose 连接与分流主页</b></sub>
     </td>
     <td align="center" width="48%">
       <p>
@@ -42,25 +42,25 @@
   </tr>
 </table>
 
-### 移动端实拍截图（暗色/浅色手机与平板自适应布局）
+### 移动端竖屏实拍截图（暗色 / 浅色原生手机界面）
 
 <table>
   <tr>
-    <td align="center" width="24%">
-      <img src="../docs/screenshots/android-phone-connect-dark.png" alt="Android 手机端暗色连接主页" width="100%" /><br/>
-      <sub><b>手机端（暗色）：一键连接与按应用分流</b></sub>
-    </td>
-    <td align="center" width="26%">
-      <img src="../docs/screenshots/android-tablet-connect-light.png" alt="Android 平板端浅色横屏适配" width="100%" /><br/>
-      <sub><b>平板端（浅色）：侧边栏自适应与隧道状态</b></sub>
+    <td align="center" width="25%">
+      <img src="../docs/screenshots/android-phone-connect-dark.png" alt="Android 暗色竖屏连接主页" width="100%" /><br/>
+      <sub><b>暗色连接主页：独享隧道、常用接管应用与按应用分流</b></sub>
     </td>
     <td align="center" width="25%">
-      <img src="../docs/screenshots/android-per-app-routing.png" alt="Android 按应用分流选择清单" width="100%" /><br/>
-      <sub><b>分流应用页：精准勾选 AI 与浏览器进入隧道</b></sub>
+      <img src="../docs/screenshots/android-phone-connect-light.png" alt="Android 浅色竖屏连接主页" width="100%" /><br/>
+      <sub><b>浅色连接主页：日间外观一键切换与快捷 AI 接管</b></sub>
     </td>
     <td align="center" width="25%">
-      <img src="../docs/screenshots/android-usage-tickets.png" alt="Android AI 用量与工单" width="100%" /><br/>
-      <sub><b>用量与工单页：跨端脱敏会话用量与工单闭环</b></sub>
+      <img src="../docs/screenshots/android-per-app-routing.png" alt="Android 竖屏按应用分流清单" width="100%" /><br/>
+      <sub><b>分流应用页：精准勾选 AI 与浏览器，支持自动伴随 Google 服务</b></sub>
+    </td>
+    <td align="center" width="25%">
+      <img src="../docs/screenshots/android-usage-tickets.png" alt="Android 竖屏 AI 用量与工单" width="100%" /><br/>
+      <sub><b>用量与工单页：7/30/90 天脱敏会话汇总与工单闭环</b></sub>
     </td>
   </tr>
 </table>

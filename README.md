@@ -46,17 +46,17 @@
 
 <table>
   <tr>
-    <td align="center" width="34%">
+    <td align="center" width="40%">
       <img src="docs/screenshots/desktop-overview.png" alt="定途桌面端 v0.2.0 接入总览与通道连接界面" width="100%" /><br/>
       <sub><b>桌面端 v0.2.0 · 基础代理连接与接入总览</b></sub>
     </td>
-    <td align="center" width="33%">
+    <td align="center" width="40%">
       <img src="docs/screenshots/desktop-17-ai-plaza.png" alt="定途桌面端 v0.2.0 17 款 AI 工作台、多账号与多开广场" width="100%" /><br/>
       <sub><b>桌面端 v0.2.0 · 17 款 AI 工作台、多账号与多开面板</b></sub>
     </td>
-    <td align="center" width="33%">
-      <img src="docs/screenshots/android-per-app-routing.png" alt="定途 Android v0.1.0 原生 Compose 按应用分流与一键连接界面" width="100%" /><br/>
-      <sub><b>Android v0.1.0 · 原生 Compose 按应用分流与随身管理</b></sub>
+    <td align="center" width="20%">
+      <img src="docs/screenshots/android-phone-connect-dark.png" alt="定途 Android v0.1.0 竖屏连接与按应用分流界面" width="140" /><br/>
+      <sub><b>Android v0.1.0 · 竖屏原生 Compose 连接与分流</b></sub>
     </td>
   </tr>
 </table>
@@ -162,25 +162,25 @@
   <sub><b>官网完整版专属控制面实拍（开源版已按规范剥离）：包含「专属线路 / 强代理 TUN（虚拟网卡 dingtu-tun0）/ 自有网络」三态切换、安全容器/隔离 Chrome/Edge 引擎选择及「环境指纹与出口自检」控件</b></sub>
 </p>
 
-### 5. Android 移动端实拍截图展示（`v0.1.0` 手机 / 平板自适应界面）
+### 5. Android 移动端竖屏实拍截图展示（`v0.1.0` 原生手机界面）
 
 <table>
   <tr>
-    <td align="center" width="24%">
-      <img src="docs/screenshots/android-phone-connect-dark.png" alt="Android 手机端暗色连接主页" width="100%" /><br/>
-      <sub><b>手机端（暗色）：一键连接、按应用分流与模式选择</b></sub>
-    </td>
-    <td align="center" width="26%">
-      <img src="docs/screenshots/android-tablet-connect-light.png" alt="Android 平板端浅色横屏适配" width="100%" /><br/>
-      <sub><b>平板端（浅色）：侧边栏自适应与快捷应用状态</b></sub>
+    <td align="center" width="25%">
+      <img src="docs/screenshots/android-phone-connect-dark.png" alt="Android 暗色竖屏连接主页" width="100%" /><br/>
+      <sub><b>暗色连接主页：独享隧道、常用接管应用与按应用分流</b></sub>
     </td>
     <td align="center" width="25%">
-      <img src="docs/screenshots/android-per-app-routing.png" alt="Android 按应用分流清单" width="100%" /><br/>
-      <sub><b>按应用分流：勾选受管 AI 应用与浏览器进入隧道</b></sub>
+      <img src="docs/screenshots/android-phone-connect-light.png" alt="Android 浅色竖屏连接主页" width="100%" /><br/>
+      <sub><b>浅色连接主页：日间外观一键切换与快捷 AI 接管</b></sub>
     </td>
     <td align="center" width="25%">
-      <img src="docs/screenshots/android-usage-tickets.png" alt="Android 随身 AI 用量与工单闭环" width="100%" /><br/>
-      <sub><b>用量与工单：7/30/90 天脱敏会话汇总与服务工单</b></sub>
+      <img src="docs/screenshots/android-per-app-routing.png" alt="Android 竖屏按应用分流清单" width="100%" /><br/>
+      <sub><b>按应用分流页：精准勾选 AI 与浏览器，支持自动伴随 Google 服务</b></sub>
+    </td>
+    <td align="center" width="25%">
+      <img src="docs/screenshots/android-usage-tickets.png" alt="Android 竖屏 AI 用量与工单闭环" width="100%" /><br/>
+      <sub><b>用量与工单页：7/30/90 天脱敏会话汇总与工单闭环</b></sub>
     </td>
   </tr>
 </table>
